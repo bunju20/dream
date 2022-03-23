@@ -33,3 +33,37 @@
 * {
     box-sizing: border-box;
 }
+
+/* 텍스트에 대한 설정을 할 것임.
+Typography
+ */
+
+ /* 마진을 위아래로 8씩 주자. */
+ h1 {
+   font-size: var(--font-large);
+   font-weight: var(--weight-bold);
+   color: var(--color-black);
+   margin: 16px 0; 
+   /* 마진에 원소개수 두개면 위아래 양옆.  4개면 시계방향*/
+ }
+
+ h2 {
+   font-size: var(--weight-regular);
+   font-weight: var(--weight-semi-bold);
+   color: var(--color-black);
+   margin: 8px 0;
+ }
+
+ h3 {
+   font-size: var(--font-regular);
+   font-weight: var(--weight-regular);
+   color: var(--color-black);
+   margin: 8px 0;
+ }
+
+  p {
+   font-size: var(--font-regular);
+   font-weight: var(--weight-regular);
+   color: var(--color-black);
+   margin: 4px 0;
+ }
