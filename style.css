@@ -27,6 +27,9 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* size */
+  --size-border-radius: 4px;
 }
 
 /*Universal tags*/
@@ -39,6 +42,22 @@ Typography
  */
 
  /* 마진을 위아래로 8씩 주자. */
+
+ body{
+   margin: 0;
+   font-family: sans-serif;
+ }
+
+ a{
+   text-decoration: none;
+   color: var(--color-white);
+ }
+
+ u{
+   list-style: none;
+   padding-left: 0;
+ }
+
  h1 {
    font-size: var(--font-large);
    font-weight: var(--weight-bold);
@@ -66,4 +85,41 @@ Typography
    font-weight: var(--weight-regular);
    color: var(--color-black);
    margin: 4px 0;
+ }
+
+ /* Navbar */
+
+ #navbar{
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--color-pink);
+   align-items:center;
+   color: var(--color-white);
+   padding: 16px;
+ }
+
+ .navbar__menu{
+   display: flex;
+ }
+
+ .navbar__logo{
+   font-size: var(--font-medium);
+   font-weight: var(--weight-semi-bold);
+ }
+
+ .navbar__menu__item{
+   padding: 8px 12px;
+   margin: 0 4px;
+   /* 마우스를 갖다대면 마우스가 손모양이 되도록 */
+   cursor: pointer;
+   border-radius: var(--size-border-radius);
+ }
+
+ .navbar__menu__item.active{
+   border: 1px solid var(--color-white);
+ }
+
+/* 마우스가 올라간 상태일때. */
+ .navbar__menu__item:hover{
+  background-color: var(--color-dark-pink);
  }
