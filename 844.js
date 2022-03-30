@@ -5,9 +5,9 @@ main
 -while
   si = clearBack
   ti = clearBack
--if(s[si] !== t[ti])return false;
-si ti --;
- 
+- if(s[si] !== t[ti])return false;
+  si ti --;
+  
 clearBack
 -skip
 -while문

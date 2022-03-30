@@ -40,44 +40,30 @@ space: O(N*M)
 */
 
 
-var shortestDistance = function (maze, start, destination) {
-  if (start[0] === destination[0] && start === destination[1]) return 0;
 
-  let m = destination.length;
-  let n = destination[0].length;
-  let sum = 0;
-
-  let dir = [
-    [0, 1],
-    [1, 0],
-    [0, -1],
-    [-1, 0],
-  ];
-  let curI = start[0];
-  let curJ = start[1];
-
-  for (let [di, dj] of dir) {
-    let count = -1;
-    while (
-      curI >= 0 &&
-      curI < m &&
-      curJ >= 0 &&
-      curJ < n &&
-      maze[curI][curJ] !== 1
-    ) {
-      curI += di;
-      curJ += dj;
-      count++;
+const hasPath = (maze, start, destination) => {
+    if (start[0] === destination[0] && start[1] === destination[1]) {
+        return true;
     }
-    curI -= di;
-    curJ -= dj;
 
-    console.log(curI, curJ);
-    if (maze[curI][curJ] !== 0) continue;
-    maze[curI][curJ] = 2;
+    const m = maze.length;
+    const n = maze[0].length;
+    const dirs = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+    
+    for (let [dx, dy] of dirs) {
+        let i = start[0], j = start[1];
+				
+        while (i >= 0 && i < m && j >= 0 && j < n && maze[i][j] !== 1) {
+            i += dx; j += dy;
+        }
+        i -= dx; j -= dy;
 
-    sum += shortestDistance(maze, [curI, curJ], destination);
-    return sum;
-  }
-  return -1;
+        if(maze[i][j] !== 0)continue;
+        maze[i][j] = 2;
+				
+        if (hasPath(maze, [i, j], destination)) return true;
+    }
+    
+    return false;
 };
+

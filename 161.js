@@ -28,7 +28,7 @@ function findCount(s, t) {
 9 : 15 ~ 9 : 37
 
 I: string s, t
-O:boolean
+O: boolean
 C:
 0 <= s.length, t.length <= 104
 s and t consist of lowercase letters, uppercase letters, and digits.

@@ -2,7 +2,7 @@
 10: 50 ~ 11:36
 
 I: string
-O: 두개로 이루어진 최대로 긴 substring
+O: 문자가 두개로 이루어진 최대로 긴 substring
 C: 
 1 <= s.length <= 105
 s consists of English letters.
@@ -16,7 +16,7 @@ r: b
 "ccaabbb"
    ^        
        ^
-ds: x
+ds: map
 algo: two pointer 
 
 solution:
