@@ -30,6 +30,9 @@
 
   /* size */
   --size-border-radius: 4px;
+
+  /* animation */
+  --anymation-duration: 300ms;
 }
 
 /*Universal tags*/
@@ -159,4 +162,79 @@ Typography
    padding: 8px 12px;
    border: 2px solid var(--color-white);
    border-radius: var(--size-border-radius);
+ }
+
+ /* 다들 중간에 모여있으니까 공통적인거를 따로 만들어두자.*/
+ /* section common */
+
+ .section{
+   padding: 50px;
+   text-align: center;
+   max-width: 1200px;
+   margin: auto;
+   /* 마진이 양쪽으로 골고루 분산되도록 하는것. */
+ }
+
+ /* About */
+ .about__majors{
+   display: flex;
+   justify-content: space-between;
+   margin: 80px 0;
+ }
+
+ /* 이거 아이콘 만들면서 확인하긴 어려우니까백그라운드 색깔 깔면서 하면 좋음 */
+ .major__icon{
+   width: 170px;
+   height: 170px;
+   font-size: 70px;
+   line-height: 170px;
+   margin: auto;
+   color: var(--color-blue);
+   border: 1px solid var(--color-blue);
+   border-radius: 50%;
+   margin-bottom: 16px;
+ }
+
+ .major__icon i{
+   transition: all var(--anymation-duration) ease;
+ }
+ /* 아이콘 동그라미에 호버가 되었을때
+ 안에있는 아이콘에 스타일링을 적용할 것임 */
+ .major__icon:hover i{
+   color : var(--color-pink);
+   transform: rotate(-30deg) scale(1.1);
+ }
+
+ .major__title.major__description{
+   color: var(--color-dark-grey);
+ }
+
+ .major__description{
+   font-size: var(--font-small);
+ }
+
+ .job{
+   display: flex;
+   align-items: center;
+ }
+
+ .job__description{
+   margin: 0 16px;
+   text-align: left;
+ }
+
+ .job__name,.job__period{
+   color: var(--color-light-grey);
+ }
+
+ .job__name{
+   font-size: var(--font-small);
+ }
+
+ .job__logo{
+   width: 170px;
+ }
+
+ .job__period{
+   font-size: var(--font-micro);
  }
