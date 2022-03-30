@@ -58,6 +58,14 @@ Typography
    padding-left: 0;
  }
 
+ button{
+   /* 버튼의 기본속성을 없애는 과정 */
+   background-color: transparent;
+   cursor: pointer;
+   border: none;
+   outline: none;
+ }
+
  h1 {
    font-size: var(--font-large);
    font-weight: var(--weight-bold);
@@ -122,4 +130,33 @@ Typography
 /* 마우스가 올라간 상태일때. */
  .navbar__menu__item:hover{
   background-color: var(--color-dark-pink);
+ }
+
+ #home{
+   /* 백그라운드가 센터에 위치하고 반응형이 되도록 */
+   background: url('imgs/background.png') center/cover no-repeat;
+   padding: 40px;
+   text-align: center;
+ }
+
+ .home__avatar{
+   width: 250px;
+   height: 250px;
+   border-radius: 50%;
+   border: 2px solid var(--color-white);
+ }
+
+ .home__title,
+ .home__description{
+   color: var(--color-white);
+ }
+
+ .home__contact{
+   color: var(--color-white);
+   font-size: var(--font-regular);
+   font-weight: var(--weight-bold);
+   margin: 24px;
+   padding: 8px 12px;
+   border: 2px solid var(--color-white);
+   border-radius: var(--size-border-radius);
  }
