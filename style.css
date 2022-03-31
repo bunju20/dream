@@ -78,7 +78,7 @@ Typography
  }
 
  h2 {
-   font-size: var(--weight-regular);
+   font-size: var(--font-medium);
    font-weight: var(--weight-semi-bold);
    color: var(--color-black);
    margin: 8px 0;
@@ -435,4 +435,31 @@ Typography
 
  .testimonial__speech-bubble a {
    color: var(--color-pink);
+ }
+
+ /* contact */
+
+ #contact{
+   background-color: var(--color-pink);
+ }
+
+ .contact__title,
+ .contact__email,
+ .contact__rights{
+   color: var(--color-white);
+ }
+
+ .contact__title{
+   margin: 32px 0;
+ }
+
+ .contact__links {
+   font-size: var(--font-large);
+   margin: 24px 0;
+ }
+
+ .contact__links i:hover{
+   transform: scale(1.1);
+   color: var(--color-yellow);
+   transition: all var(--anymation-duration)
  }
