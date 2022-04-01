@@ -135,6 +135,19 @@ Typography
   background-color: var(--color-dark-pink);
  }
 
+ .navbar__toggle-btn {
+   position: absolute;
+   top: 24px;
+   right: 32px;
+   font-size: 24px;
+   color: var(--color-white);
+   display: none;
+
+ }
+
+
+
+
  #home{
    /* 백그라운드가 센터에 위치하고 반응형이 되도록 */
    background: url('imgs/background.png') center/cover no-repeat;
@@ -463,3 +476,41 @@ Typography
    color: var(--color-yellow);
    transition: all var(--anymation-duration)
  }
+
+ @media screen and (max-width: 768px) {
+   .navbar__toggle-btn{
+     display: block;
+   }
+   #navbar{
+     /* 위에서 아래로 나오게 하려고 */
+     flex-direction: column; 
+     align-items: flex-start;
+   }
+   .navbar__menu{
+     flex-direction: column;
+     text-align: center;
+     width: 100%;
+     display: none;
+   }
+
+   .about__majors{
+     flex-direction: column;
+
+   }
+   .major {
+       margin-bottom: 38px;
+     }
+
+    .skillset{
+      flex-direction: column;
+    }
+
+    .testimonial__avatar{
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .project{
+    flex-grow: 1;
+  }
