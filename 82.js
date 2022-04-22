@@ -12,7 +12,6 @@ solution:
         -pre 옆으로 이동
 
     -cur 옆으로 이동
-
 -return result.next;
 
 time: O(N)
