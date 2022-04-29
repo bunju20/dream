@@ -1,6 +1,7 @@
 /*
-목적지에 도착하는 최단거리구하는 문제.
-
+solution:
+time: O(N*M^2) (N < M)일때
+space: O(N*M)
 
 */
 
@@ -8,7 +9,6 @@ var shortestDistance = function(maze, start, destination) {
 
     if (maze === null || maze.length === 0 || maze[0].length === 0) return maze;
     
-    let shortestDis = Number.MAX_SAFE_INTEGER;
     let distance = new Array(maze.length);
     
     const destRow = destination[0];
