@@ -1,6 +1,6 @@
 /*
 Trie: 1065
-
+쌰
 */
 
 var indexPairs = function(text, words) {
