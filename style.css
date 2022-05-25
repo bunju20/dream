@@ -110,6 +110,7 @@ Typography
    color: var(--color-white);
    padding: 16px;
    transition: all var(--anymation-duration) ease-in-out;
+   z-index: 1;
  }
 
 
