@@ -6,8 +6,6 @@ const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 // 스크롤이 될때마다 이 안에있는 애가 실행이 되도록.
 document.addEventListener('scroll',()=>{
-    console.log(window.scrollY);
-    console.log(`navbarHeight: ${navbarHeight}`);
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
     }else{
@@ -33,6 +31,21 @@ const contactMe = document.querySelector('.home__contact');
  contactMe.addEventListener('click',(event)=>{
     scrollIntoView('#contact')
  })
+
+//스크롤 하면서 점점 홈이 투명해짐.
+
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
 
  function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
