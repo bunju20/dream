@@ -33,16 +33,28 @@ const contactMe = document.querySelector('.home__contact');
  })
 
 //스크롤 하면서 점점 홈이 투명해짐.
-
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+//arrow up 버튼 스크롤 아래로 내려가면 보이게
+
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',() =>{
+    if(window.scrollY > homeHeight / 2){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
 
 
-
+//handle click on the arrow up btn
+arrowUp.addEventListener('click',()=>{
+    scrollIntoView('#home')
+});
 
 
 
