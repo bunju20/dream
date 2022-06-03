@@ -133,6 +133,7 @@ Typography
    margin: 0 4px;
    /* 마우스를 갖다대면 마우스가 손모양이 되도록 */
    cursor: pointer;
+   border: 1px solid transparent;
    border-radius: var(--size-border-radius);
  }
 
@@ -142,6 +143,7 @@ Typography
 
 /* 마우스가 올라간 상태일때. */
  .navbar__menu__item:hover{
+   border-color: var(--color-white);
   background-color: var(--color-dark-pink);
  }
 
@@ -335,13 +337,13 @@ Typography
    padding: 8px 48px;
  }
 
- .category__btn.active,
+ .category__btn.selected,
  .category__btn:hover{
   background-color: var(--color-pink);
   color: var(--color-white);
  }
 
- .category__btn.active .category__count,
+ .category__btn.selected.category__count,
  .category__btn:hover .category__count{
    opacity: 1;
    top: 0;
