@@ -13,8 +13,9 @@ document.addEventListener('scroll',()=>{
     }
 })
 
-// navbar누르면 스크롤링해주는 거
 
+
+// navbar누르면 스크롤링해주는 거
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event)=>{
     const target = event.target;
@@ -22,8 +23,16 @@ navbarMenu.addEventListener('click',(event)=>{
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 })
+
+
+//navbar토글 버튼
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
 
 // contact me 누르면 contact로 이동시켜줌.
 
