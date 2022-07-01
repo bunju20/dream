@@ -20,6 +20,18 @@
 
 
 
+https://leetcode.com/problems/longest-common-prefix/
+
+https://leetcode.com/problems/roman-to-integer/
+
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+
+https://leetcode.com/problems/contains-duplicate/
+
+https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+
+
+
 
 #### ✔️전공공부 : 윈도우즈 시스템 프로그래밍  
 
