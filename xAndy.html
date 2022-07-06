@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        button{ 
+            display: inline;
+        }
+        
+        .block{
+            display: flex;
+            align-items: center;
+            margin: 16px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            vertical-align: center;
+        }
+        .target{
+            display: flex;
+            align-items: center;
+            margin: 16px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            vertical-align: center;
+        }
+    </style>
+    <button class = "by">scroll by 100px(y)</button>
+    <button class="to">scroll to 100px</button>
+    <button class="into">scroll into special</button>
+</head>
+<body>
+
+
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="target"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    
+    
+    <script>
+        
+         const by = document.querySelector(".by");
+         const to = document.querySelector(".to");
+         const into = document.querySelector(".into");
+         const target = document.querySelector('.target');
+
+         by.addEventListener('click', (e) => {
+            window.scrollTo(e.clientX,e.clientY + 100);
+         })
+
+         to.addEventListener('click' , (e) => {
+            window.scrollTo(e.clientX,100);
+         })
+
+         into.addEventListener('click', (e) => {
+            const intoY =  target.getBoundingClientRect().top;
+            window.scrollTo(e.clientX,intoY);
+         })
+
+        
+        
+
+        target.addEventListener('click',(e) => {
+           console.log(`
+           client : ${e.clientX} , ${e.clientY}
+           page : ${e.pageX} , ${e.pageY}
+           `)
+        })
+
+        
+    </script>
+</body>
+</html>
