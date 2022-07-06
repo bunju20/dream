@@ -1,8 +1,43 @@
 /*
+[-4,-1,0,3,10]
+       ^
+       ^
+[0,1,9,16,100]
+
+return
+[,16,100]
 time: O(N)
 space: O(N)
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var sortedSquares = function(A) {
     let result = [];
     let l = 0;

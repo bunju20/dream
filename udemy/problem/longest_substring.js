@@ -8,28 +8,11 @@ E:
 if(s.length <= 1)return s.length;
 
 ds: hash map
-algo:two pointer
-
-"abcabcbb"
-        ^ 
-        ^ 
-
- a: 1
- b: 1
- c: 1
+algo: two pointer
 
 solution:
--map
--for
-    -curChar이 map에 있으면 while문으로 돌리면서 map갱신
-    -없으면 map갱신
-    -최대 길이 갱신
--return 최대길이
-
 time: O(N)
-space:O(M) //M < 27
-
-"abcabcbb"
+space: O(M) //M < 27
  */
 
 var lengthOfLongestSubstring = function(s) {

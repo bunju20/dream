@@ -51,10 +51,12 @@ var mergeTwoLists = function(list1, list2) {
   return res.next;
 };
 
+list1 길이: N
+list2 길이: M
+time: O(min(N,M)) 
+space: O(1)
+
 */
-
-
-
 
 var mergeTwoLists = function(list1, list2) {
     let head = new ListNode();

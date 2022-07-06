@@ -1,4 +1,44 @@
 /*
+map:
+
+3: 0
+4: 1
+[3,2,4], 
+     ^
+     return [1,2]
+target = 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 I: int array, int target
 O: 더했을때 타겟되는 인덱스 두개
 C:
@@ -23,11 +63,16 @@ return [];
 
 time: O(N)
 space: O(N)
+
+Input: nums = [2,7,11,15], target = 9
+                 ^
+7 : 0
+
 */
 
 var twoSum = function(nums, target) {
   if(nums.length === 2)return [0,1];
-  
+    
   let map = new Map();
 
   for(let i = 0; i < nums.length; i++){

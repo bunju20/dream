@@ -1,3 +1,6 @@
+/*
+
+*/
 var search = function (nums, target) {
     if (nums.length === 1) return nums[0] === target ? 0 : -1;
 
