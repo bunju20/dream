@@ -41,7 +41,6 @@ var floodFill = function(image, sr, sc, newColor) {
     if(image[sr][sc] === newColor)return image;
     let curColor = image[sr][sc];
     dfs(sr,sc,image,curColor,newColor);
-    
     return image;   
 }
 
@@ -58,6 +57,6 @@ function dfs(x,y,image,curColor,newColor){
         let newY = y + direct[i][1];
         dfs(newX,newY,image,curColor,newColor)
     }
-
     return;
 }
+

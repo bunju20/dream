@@ -26,8 +26,8 @@ N : 트리의 길이
 time: O(N)
 space:O(N)
 
-https://leetcode.com/problems/populating-next-right-pointers-in-each-node/discuss/420632/JavaScript-BFS-and-DFS-Solution
-
+2->3....
+[2(2) 3(2)]
 */
 
 var connect = function(root) {
@@ -45,3 +45,29 @@ var connect = function(root) {
     }    
     return root;
 };
+
+/*
+
+dfs
+solution:
+dfs(root){
+    if(없으면)return root;
+
+    root.left.next = root.right;
+    root.right.next = root.next.left;
+    dfs(left)
+    dfs(right)
+
+    return root;
+}
+*/
+
+var connect = function(root) {
+    if (root == null || root.left == null) return root;
+    root.left.next = root.right;
+    root.right.next = root.next ? root.next.left:null;
+    connect(root.left);
+    connect(root.right);
+    return root;
+}
+
