@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      img{
+        align-items: center;
+        display: block;
+      }
+      button{
+        background-color: red;
+        color: white;
+        height: 70px;
+        width: 200px;
+        border-radius: 10%;
+        font-size: 28px;
+        margin: 18px 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">find carrot!</button>
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/carrot.png" alt="" class="carrot">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <img src="img/rabbit.png" alt="" class="rabbit">
+    <script>
+
+      const carrot = document.querySelector('.carrot');
+      const btn = document.querySelector('.btn');
+      btn.addEventListener('click',()=>{
+        carrot.scrollIntoView({behavior:"smooth", block:"center"});
+      })
+
+    </script>
+  </body>
+</html>
